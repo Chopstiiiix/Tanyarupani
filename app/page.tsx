@@ -508,12 +508,12 @@ export default function Home() {
           <div className="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {CASE_STUDIES.map((entry, i) => (
               <article key={i} className="flex flex-col gap-4">
-                <div className="group relative aspect-square w-full overflow-hidden bg-[#1a1a1a]">
+                <div className="relative aspect-square w-full overflow-hidden bg-[#1a1a1a]">
                   {entry.cover ? (
                     <img
                       src={entry.cover}
                       alt={`${entry.client} — ${entry.project}`}
-                      className="absolute inset-0 h-full w-full object-cover grayscale transition-[filter] duration-700 ease-out group-hover:grayscale-0"
+                      className="absolute inset-0 h-full w-full object-cover"
                     />
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-6 text-center">
