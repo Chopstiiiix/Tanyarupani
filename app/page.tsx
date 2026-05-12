@@ -53,42 +53,42 @@ const CASE_STUDIES = [
     project: "[PROJECT TITLE]",
     mandate: "Brand Strategy",
     year: "2024",
-    cover: "",
+    cover: "/images/work/01.jpg",
   },
   {
     client: "[CLIENT NAME]",
     project: "[PROJECT TITLE]",
     mandate: "Creative Direction",
     year: "2023",
-    cover: "",
+    cover: "/images/work/02.jpg",
   },
   {
     client: "[CLIENT NAME]",
     project: "[PROJECT TITLE]",
     mandate: "Market Entry",
     year: "2023",
-    cover: "",
+    cover: "/images/work/03.jpg",
   },
   {
     client: "[CLIENT NAME]",
     project: "[PROJECT TITLE]",
     mandate: "Brand Audit",
     year: "2022",
-    cover: "",
+    cover: "/images/work/04.jpg",
   },
   {
     client: "[CLIENT NAME]",
     project: "[PROJECT TITLE]",
     mandate: "Brand Strategy",
     year: "2022",
-    cover: "",
+    cover: "/images/work/05.jpg",
   },
   {
     client: "[CLIENT NAME]",
     project: "[PROJECT TITLE]",
     mandate: "Creative Direction",
     year: "2021",
-    cover: "",
+    cover: "/images/work/06.jpg",
   },
 ];
 
@@ -508,12 +508,12 @@ export default function Home() {
           <div className="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {CASE_STUDIES.map((entry, i) => (
               <article key={i} className="flex flex-col gap-4">
-                <div className="relative aspect-square w-full overflow-hidden bg-[#1a1a1a]">
+                <div className="group relative aspect-square w-full overflow-hidden bg-[#1a1a1a]">
                   {entry.cover ? (
                     <img
                       src={entry.cover}
                       alt={`${entry.client} — ${entry.project}`}
-                      className="absolute inset-0 h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-cover grayscale transition-[filter] duration-700 ease-out group-hover:grayscale-0"
                     />
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-6 text-center">
