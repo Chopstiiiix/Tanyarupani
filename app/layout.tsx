@@ -21,9 +21,9 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tanya Rupani | Music & Culture",
+  title: "Tanya Rupani | Luxury Brand Consultant",
   description:
-    "The portfolio and studio of Tanya Rupani.",
+    "Luxury brand consulting by Tanya Rupani. Strategy, creative direction and market entry for houses, maisons and founders shaping the future of luxury.",
 };
 
 export default function RootLayout({

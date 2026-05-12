@@ -6,35 +6,35 @@ const MARQUEE_WORDS = [
   "OVER",
   "A DECADE",
   "OF",
-  "CRAFTING",
-  "SOUNDS",
+  "SHAPING",
+  "BRANDS",
   "THAT",
-  "MOVE",
+  "LEAD",
   "CULTURE",
   "·",
 ];
 
-const GENRE_WORDS = [
-  "AFROBEATS",
-  "AMAPIANO",
-  "AFROPOP",
-  "R&B",
-  "HIGHLIFE",
-  "AFRO-FUSION",
-  "DANCEHALL",
-  "DRILL",
+const SECTOR_WORDS = [
+  "FASHION",
+  "BEAUTY",
+  "HOSPITALITY",
+  "FINE JEWELLERY",
+  "FRAGRANCE",
+  "SPIRITS",
+  "TRAVEL",
+  "DESIGN",
 ];
 
 const NAV_ITEMS = [
   { label: "Intro", href: "#section-intro" },
-  { label: "Productions", href: "#section-productions" },
+  { label: "Practice", href: "#section-practice" },
   { label: "About", href: "#section-about" },
-  { label: "Artists", href: "#section-artists" },
-  { label: "Discography", href: "#section-discography" },
+  { label: "Clients", href: "#section-clients" },
+  { label: "Work", href: "#section-work" },
   { label: "Contact", href: "#section-contact" },
 ];
 
-const HERO_VIDEO_SRC = "";
+const HERO_VIDEO_SRC = "/videos/hero.mp4";
 
 const ABOUT_IMAGE_SRC = "/images/about.jpg";
 
@@ -43,95 +43,96 @@ const CONTACT = {
   phone: "+234 000 000 0000",
   email: "send2chopstix@gmail.com",
   instagram: "https://instagram.com/tanyarupani",
+  linkedin: "https://linkedin.com/in/tanyarupani",
   twitter: "https://twitter.com/tanyarupani",
-  spotify: "https://open.spotify.com/artist/tanyarupani",
 };
 
-const CREDITS = [
+const CASE_STUDIES = [
   {
-    artist: "[ARTIST NAME]",
-    title: "[SONG / ALBUM TITLE]",
-    role: "Producer",
+    client: "[CLIENT NAME]",
+    project: "[PROJECT TITLE]",
+    mandate: "Brand Strategy",
     year: "2024",
     cover: "",
   },
   {
-    artist: "[ARTIST NAME]",
-    title: "[SONG / ALBUM TITLE]",
-    role: "Co-Producer",
+    client: "[CLIENT NAME]",
+    project: "[PROJECT TITLE]",
+    mandate: "Creative Direction",
     year: "2023",
     cover: "",
   },
   {
-    artist: "[ARTIST NAME]",
-    title: "[SONG / ALBUM TITLE]",
-    role: "Executive Producer",
+    client: "[CLIENT NAME]",
+    project: "[PROJECT TITLE]",
+    mandate: "Market Entry",
     year: "2023",
     cover: "",
   },
   {
-    artist: "[ARTIST NAME]",
-    title: "[SONG / ALBUM TITLE]",
-    role: "Producer",
+    client: "[CLIENT NAME]",
+    project: "[PROJECT TITLE]",
+    mandate: "Brand Audit",
     year: "2022",
     cover: "",
   },
   {
-    artist: "[ARTIST NAME]",
-    title: "[SONG / ALBUM TITLE]",
-    role: "Producer",
+    client: "[CLIENT NAME]",
+    project: "[PROJECT TITLE]",
+    mandate: "Brand Strategy",
     year: "2022",
     cover: "",
   },
   {
-    artist: "[ARTIST NAME]",
-    title: "[SONG / ALBUM TITLE]",
-    role: "Producer",
+    client: "[CLIENT NAME]",
+    project: "[PROJECT TITLE]",
+    mandate: "Creative Direction",
     year: "2021",
     cover: "",
   },
 ];
 
-const BRAND_LOGOS = [
-  "[ARTIST 01]",
-  "[ARTIST 02]",
-  "[ARTIST 03]",
-  "[LABEL 01]",
-  "[ARTIST 04]",
-  "[LABEL 02]",
-  "[ARTIST 05]",
-  "[ARTIST 06]",
+const CLIENTS = [
+  "[HOUSE 01]",
+  "[MAISON 01]",
+  "[GROUP 01]",
+  "[HOUSE 02]",
+  "[FOUNDER 01]",
+  "[MAISON 02]",
+  "[HOUSE 03]",
+  "[GROUP 02]",
 ];
 
 const STATS = [
-  { value: "10+", label: "Years Active" },
-  { value: "50+", label: "Production Credits" },
-  { value: "3", label: "Continents" },
+  { value: "10+", label: "Years in Luxury" },
+  { value: "40+", label: "Houses Advised" },
+  { value: "4", label: "Continents" },
 ];
 
 const SERVICES = [
   {
     number: "01",
-    title: "Beat Production",
+    title: "Brand Strategy",
     description:
-      "Custom instrumentals for artists, labels and sync placements worldwide",
+      "Positioning, narrative architecture and category-defining ideas for luxury houses",
   },
   {
     number: "02",
-    title: "Executive Production",
+    title: "Creative Direction",
     description:
-      "Full project oversight — A&R, arrangement, session coordination and delivery",
+      "Visual identity, art direction and the disciplined editing that makes luxury feel inevitable",
   },
   {
     number: "03",
-    title: "Sound Direction",
+    title: "Market Entry",
     description:
-      "Defining the sonic identity of artists, brands and campaigns",
+      "Launching maisons into new regions — cultural, retail and editorial groundwork",
   },
   {
     number: "04",
-    title: "Sync & Licensing",
-    description: "Music placed in film, TV, ads and digital content globally",
+    title: "Brand Audit",
+    description:
+      "Diagnostics for established houses navigating reinvention, succession or scale",
   },
 ];
 
@@ -274,20 +275,28 @@ export default function Home() {
         id="section-intro"
         className="relative flex min-h-screen flex-col overflow-hidden pt-16 md:pt-20"
       >
-        {HERO_VIDEO_SRC && (
-          <video
-            className="absolute inset-0 h-full w-full object-cover"
-            src={HERO_VIDEO_SRC}
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
+        {HERO_VIDEO_SRC ? (
+          <>
+            <video
+              className="absolute inset-0 h-full w-full object-cover"
+              src={HERO_VIDEO_SRC}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+            />
+            <div
+              className="absolute inset-0 bg-gradient-to-b from-[#080808]/30 via-[#080808]/45 to-[#080808]/85"
+              aria-hidden="true"
+            />
+          </>
+        ) : (
+          <div className="absolute inset-0 bg-[#111]" aria-hidden="true" />
         )}
-        <div className="absolute inset-0 bg-[#111]" aria-hidden="true" />
 
         <div className="relative z-10 flex flex-1 flex-col">
-          <div className="overflow-hidden border-y border-white/10 py-5">
+          <div className="overflow-hidden border-y border-white/10 bg-[#080808]/40 py-5 backdrop-blur-sm">
             <div className="flex flex-nowrap items-center gap-10 whitespace-nowrap px-6 font-[family-name:var(--font-bebas-neue)] text-3xl tracking-[0.18em] text-white/90 md:text-4xl">
               {[...MARQUEE_WORDS, ...MARQUEE_WORDS].map((word, i) => (
                 <span key={i} className="shrink-0">
@@ -298,24 +307,24 @@ export default function Home() {
           </div>
 
           <div className="flex flex-1 flex-col justify-center px-6 py-20 md:px-16 lg:px-24">
-            <p className="mb-8 font-[family-name:var(--font-space-mono)] text-[11px] uppercase tracking-[0.32em] text-white/60">
-              Music Producer · Summertime Music LTD
+            <p className="mb-8 font-[family-name:var(--font-space-mono)] text-[11px] uppercase tracking-[0.32em] text-white/70">
+              Luxury Brand Consultant · Summertime LTD
             </p>
             <h1 className="font-[family-name:var(--font-bebas-neue)] text-6xl leading-[0.92] tracking-tight md:text-[8rem] lg:text-[10rem]">
-              <span className="block">Sound built</span>
+              <span className="block">Strategy for</span>
               <span className="block italic font-[family-name:var(--font-dm-serif-display)] tracking-normal">
-                different.
+                luxury that lasts.
               </span>
             </h1>
-            <p className="mt-10 max-w-xl font-[family-name:var(--font-dm-serif-display)] text-lg leading-relaxed text-white/75 md:text-xl">
-              Tanya Rupani is the creative alias behind some of the most
-              distinctive productions in contemporary music. From Lagos to
-              London — the sound travels.
+            <p className="mt-10 max-w-xl font-[family-name:var(--font-dm-serif-display)] text-lg leading-relaxed text-white/85 md:text-xl">
+              Tanya Rupani partners with luxury houses, founders and emerging
+              maisons to define positioning, build cultural relevance and turn
+              taste into market leadership.
             </p>
           </div>
 
           <div className="flex justify-center pb-10">
-            <span className="font-[family-name:var(--font-space-mono)] text-[10px] uppercase tracking-[0.4em] text-white/45">
+            <span className="font-[family-name:var(--font-space-mono)] text-[10px] uppercase tracking-[0.4em] text-white/55">
               Scroll to discover
             </span>
           </div>
@@ -324,7 +333,7 @@ export default function Home() {
 
       <div className="overflow-hidden border-y border-white/10 bg-[#080808] py-4">
         <div className="flex flex-nowrap items-center gap-10 whitespace-nowrap px-6 font-[family-name:var(--font-space-mono)] text-xs uppercase tracking-[0.3em] text-white/75 md:text-sm">
-          {[...GENRE_WORDS, ...GENRE_WORDS].map((word, i) => (
+          {[...SECTOR_WORDS, ...SECTOR_WORDS].map((word, i) => (
             <span key={i} className="flex shrink-0 items-center gap-10">
               {word}
               <span aria-hidden="true" className="text-[var(--accent)]">
@@ -336,32 +345,32 @@ export default function Home() {
       </div>
 
       <section
-        id="section-productions"
+        id="section-practice"
         className="relative border-t border-white/10 px-6 py-24 md:px-16 md:py-32 lg:px-24"
       >
         <div className="mx-auto flex max-w-6xl flex-col gap-16 lg:flex-row lg:items-start lg:justify-between lg:gap-24">
           <div className="lg:max-w-md">
             <p className="mb-6 font-[family-name:var(--font-space-mono)] text-[11px] uppercase tracking-[0.32em] text-white/50">
-              Productions
+              Practice
             </p>
             <h2 className="font-[family-name:var(--font-bebas-neue)] text-5xl leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
-              More than beats.{" "}
+              More than advice.{" "}
               <span className="italic font-[family-name:var(--font-dm-serif-display)] tracking-normal">
-                A complete creative process.
+                A complete brand practice.
               </span>
             </h2>
           </div>
 
           <div className="flex flex-col gap-8 lg:max-w-md lg:pt-4">
             <p className="font-[family-name:var(--font-dm-serif-display)] text-lg leading-relaxed text-white/75 md:text-xl">
-              From the first melody sketch to the final master — every project
-              is handled with intention, craft, and cultural awareness.
+              From positioning to retail experience — every engagement is led
+              with clarity, restraint and an editor&apos;s eye.
             </p>
             <a
               href="#section-contact"
               className="group inline-flex w-fit items-center gap-2 border-b border-white/30 pb-1 font-[family-name:var(--font-space-mono)] text-xs uppercase tracking-[0.3em] text-white transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
             >
-              Start a conversation
+              Begin a conversation
               <span
                 aria-hidden="true"
                 className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -412,19 +421,19 @@ export default function Home() {
               About
             </p>
             <blockquote className="mb-12 font-[family-name:var(--font-dm-serif-display)] text-3xl italic leading-[1.15] text-white md:text-4xl lg:text-5xl">
-              “I don&apos;t chase trends. I set the temperature.”
+              “Luxury isn&apos;t louder. It&apos;s more considered.”
             </blockquote>
             <div className="flex flex-col gap-6 font-[family-name:var(--font-dm-serif-display)] text-lg leading-relaxed text-white/75 md:text-xl">
               <p>
-                Tanya Rupani is the studio alias of a Grammy-recognised music
-                producer with over a decade of credits spanning Afrobeats,
-                Afropop, R&amp;B and global fusion. Built in Lagos. Heard
-                everywhere.
+                Tanya Rupani is a luxury brand consultant with over a decade
+                spent alongside heritage houses, emerging maisons and the
+                founders building the next generation of luxury. Based across
+                London and Lagos. Practiced globally.
               </p>
               <p>
-                Under Summertime Music LTD, the work extends beyond the studio
-                — into music technology, artist development and building the
-                infrastructure that powers the next generation of sound.
+                Through Summertime LTD, the work spans strategy, creative
+                direction and the architecture behind brands built to endure —
+                for clients in fashion, beauty, hospitality and beyond.
               </p>
             </div>
 
@@ -445,24 +454,24 @@ export default function Home() {
       </section>
 
       <section
-        id="section-artists"
+        id="section-clients"
         className="relative border-t border-white/10 px-6 py-24 md:px-16 md:py-32 lg:px-24"
       >
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <p className="font-[family-name:var(--font-space-mono)] text-[11px] uppercase tracking-[0.32em] text-white/50">
-              Roster
+              Clients
             </p>
             <h2 className="max-w-3xl font-[family-name:var(--font-bebas-neue)] text-4xl leading-[0.95] tracking-tight md:text-5xl lg:text-6xl">
-              Sounds co-signed by{" "}
+              Trusted by houses that{" "}
               <span className="italic font-[family-name:var(--font-dm-serif-display)] tracking-normal">
-                artists who define their generation.
+                don&apos;t need an introduction.
               </span>
             </h2>
           </div>
 
           <ul className="mt-20 flex flex-col border-t border-white/10">
-            {BRAND_LOGOS.map((name) => (
+            {CLIENTS.map((name) => (
               <li
                 key={name}
                 className="group flex items-baseline justify-between gap-6 border-b border-white/10 py-6 transition-colors hover:bg-white/[0.02] md:py-8"
@@ -471,7 +480,7 @@ export default function Home() {
                   {name}
                 </span>
                 <span className="shrink-0 font-[family-name:var(--font-space-mono)] text-[10px] uppercase tracking-[0.3em] text-white/45 md:text-xs">
-                  [Genre / Year]
+                  [Sector / Year]
                 </span>
               </li>
             ))}
@@ -480,39 +489,39 @@ export default function Home() {
       </section>
 
       <section
-        id="section-discography"
+        id="section-work"
         className="relative border-t border-white/10 px-6 py-24 md:px-16 md:py-32 lg:px-24"
       >
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <p className="font-[family-name:var(--font-space-mono)] text-[11px] uppercase tracking-[0.32em] text-white/50">
-              Discography
+              Selected Work
             </p>
             <h2 className="font-[family-name:var(--font-bebas-neue)] text-5xl leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
-              Records that{" "}
+              Engagements that{" "}
               <span className="italic font-[family-name:var(--font-dm-serif-display)] tracking-normal">
-                travelled.
+                endured.
               </span>
             </h2>
           </div>
 
           <div className="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {CREDITS.map((credit, i) => (
+            {CASE_STUDIES.map((entry, i) => (
               <article key={i} className="flex flex-col gap-4">
                 <div className="relative aspect-square w-full overflow-hidden bg-[#1a1a1a]">
-                  {credit.cover ? (
+                  {entry.cover ? (
                     <img
-                      src={credit.cover}
-                      alt={`${credit.artist} — ${credit.title}`}
+                      src={entry.cover}
+                      alt={`${entry.client} — ${entry.project}`}
                       className="absolute inset-0 h-full w-full object-cover"
                     />
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-6 text-center">
                       <span className="font-[family-name:var(--font-bebas-neue)] text-2xl leading-tight tracking-tight text-white/80 md:text-3xl">
-                        {credit.artist}
+                        {entry.client}
                       </span>
                       <span className="font-[family-name:var(--font-dm-serif-display)] text-sm italic leading-snug text-white/55 md:text-base">
-                        {credit.title}
+                        {entry.project}
                       </span>
                     </div>
                   )}
@@ -520,18 +529,18 @@ export default function Home() {
                 <div className="flex items-baseline justify-between gap-4">
                   <div className="flex flex-col gap-1">
                     <span className="font-[family-name:var(--font-bebas-neue)] text-xl tracking-tight md:text-2xl">
-                      {credit.artist}
+                      {entry.client}
                     </span>
                     <span className="font-[family-name:var(--font-dm-serif-display)] text-sm italic leading-snug text-white/65 md:text-base">
-                      {credit.title}
+                      {entry.project}
                     </span>
                   </div>
                   <span className="shrink-0 font-[family-name:var(--font-space-mono)] text-[10px] uppercase tracking-[0.3em] text-white/45">
-                    {credit.year}
+                    {entry.year}
                   </span>
                 </div>
                 <span className="font-[family-name:var(--font-space-mono)] text-[10px] uppercase tracking-[0.3em] text-[var(--accent)]">
-                  {credit.role}
+                  {entry.mandate}
                 </span>
               </article>
             ))}
@@ -549,14 +558,14 @@ export default function Home() {
               Contact
             </p>
             <h2 className="font-[family-name:var(--font-bebas-neue)] text-5xl leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
-              Let&apos;s make{" "}
+              Let&apos;s build something{" "}
               <span className="italic font-[family-name:var(--font-dm-serif-display)] tracking-normal">
-                something real.
+                enduring.
               </span>
             </h2>
             <p className="mt-8 max-w-md font-[family-name:var(--font-dm-serif-display)] text-lg leading-relaxed text-white/75 md:text-xl">
-              Whether you&apos;re an artist, label, brand or builder — if the
-              vision aligns, the conversation starts here.
+              Whether you&apos;re a house, a founder or a group considering the
+              next move — if the vision aligns, we should speak.
             </p>
           </div>
 
@@ -625,6 +634,22 @@ export default function Home() {
 
             <div className="grid grid-cols-3 gap-px bg-white/10">
               <a
+                href={CONTACT.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between gap-3 bg-[#080808] px-6 py-5 transition-colors hover:bg-white/[0.04] md:px-8"
+              >
+                <span className="font-[family-name:var(--font-space-mono)] text-[10px] uppercase tracking-[0.3em] text-white/70 transition-colors group-hover:text-[var(--accent)]">
+                  LinkedIn
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="text-sm transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                >
+                  ↗
+                </span>
+              </a>
+              <a
                 href={CONTACT.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -656,22 +681,6 @@ export default function Home() {
                   ↗
                 </span>
               </a>
-              <a
-                href={CONTACT.spotify}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-between gap-3 bg-[#080808] px-6 py-5 transition-colors hover:bg-white/[0.04] md:px-8"
-              >
-                <span className="font-[family-name:var(--font-space-mono)] text-[10px] uppercase tracking-[0.3em] text-white/70 transition-colors group-hover:text-[var(--accent)]">
-                  Spotify
-                </span>
-                <span
-                  aria-hidden="true"
-                  className="text-sm transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                >
-                  ↗
-                </span>
-              </a>
             </div>
           </div>
         </div>
@@ -680,7 +689,7 @@ export default function Home() {
       <footer className="relative border-t border-white/10 px-6 py-10 md:px-16 lg:px-24">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 font-[family-name:var(--font-space-mono)] text-[10px] uppercase tracking-[0.3em] text-white/50 md:flex-row md:items-center md:justify-between">
           <p>
-            © 2025 Summertime Music LTD · Tanya Rupani. All rights reserved.
+            © 2025 Summertime LTD · Tanya Rupani. All rights reserved.
           </p>
           <div className="flex flex-col gap-3 md:flex-row md:gap-8">
             <a
@@ -692,12 +701,12 @@ export default function Home() {
               inspire.codes <span aria-hidden="true">↗</span>
             </a>
             <a
-              href="https://summertimemusic.com"
+              href="https://summertime.ltd"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 transition-colors hover:text-[var(--accent)]"
             >
-              Summertime Music LTD <span aria-hidden="true">↗</span>
+              Summertime LTD <span aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
