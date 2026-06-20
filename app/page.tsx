@@ -310,11 +310,9 @@ export default function Home() {
             <p className="mb-8 font-[family-name:var(--font-space-mono)] text-[11px] uppercase tracking-[0.32em] text-white/70">
               Luxury Brand Consultant · Summertime LTD
             </p>
-            <h1 className="font-[family-name:var(--font-bebas-neue)] text-6xl leading-[0.92] tracking-tight md:text-[8rem] lg:text-[10rem]">
+            <h1 className="font-[family-name:var(--font-dm-serif-display)] text-6xl italic leading-[0.92] tracking-normal md:text-[8rem] lg:text-[10rem]">
               <span className="block">Strategy for</span>
-              <span className="block italic font-[family-name:var(--font-dm-serif-display)] tracking-normal">
-                luxury that lasts.
-              </span>
+              <span className="block">luxury that lasts.</span>
             </h1>
             <p className="mt-10 max-w-xl font-[family-name:var(--font-dm-serif-display)] text-lg leading-relaxed text-white/85 md:text-xl">
               Tanya Rupani partners with luxury houses, founders and emerging
@@ -353,11 +351,8 @@ export default function Home() {
             <p className="mb-6 font-[family-name:var(--font-space-mono)] text-[11px] uppercase tracking-[0.32em] text-white/50">
               Practice
             </p>
-            <h2 className="font-[family-name:var(--font-bebas-neue)] text-5xl leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
-              More than advice.{" "}
-              <span className="italic font-[family-name:var(--font-dm-serif-display)] tracking-normal">
-                A complete brand practice.
-              </span>
+            <h2 className="font-[family-name:var(--font-dm-serif-display)] text-5xl italic leading-[0.95] tracking-normal md:text-6xl lg:text-7xl">
+              More than advice. A complete brand practice.
             </h2>
           </div>
 
@@ -462,11 +457,8 @@ export default function Home() {
             <p className="font-[family-name:var(--font-space-mono)] text-[11px] uppercase tracking-[0.32em] text-white/50">
               Clients
             </p>
-            <h2 className="max-w-3xl font-[family-name:var(--font-bebas-neue)] text-4xl leading-[0.95] tracking-tight md:text-5xl lg:text-6xl">
-              Trusted by houses that{" "}
-              <span className="italic font-[family-name:var(--font-dm-serif-display)] tracking-normal">
-                don&apos;t need an introduction.
-              </span>
+            <h2 className="max-w-3xl font-[family-name:var(--font-dm-serif-display)] text-4xl italic leading-[0.95] tracking-normal md:text-5xl lg:text-6xl">
+              Trusted by houses that don&apos;t need an introduction.
             </h2>
           </div>
 
@@ -497,11 +489,8 @@ export default function Home() {
             <p className="font-[family-name:var(--font-space-mono)] text-[11px] uppercase tracking-[0.32em] text-white/50">
               Selected Work
             </p>
-            <h2 className="font-[family-name:var(--font-bebas-neue)] text-5xl leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
-              Engagements that{" "}
-              <span className="italic font-[family-name:var(--font-dm-serif-display)] tracking-normal">
-                endured.
-              </span>
+            <h2 className="font-[family-name:var(--font-dm-serif-display)] text-5xl italic leading-[0.95] tracking-normal md:text-6xl lg:text-7xl">
+              Engagements that endured.
             </h2>
           </div>
 
@@ -557,11 +546,8 @@ export default function Home() {
             <p className="mb-6 font-[family-name:var(--font-space-mono)] text-[11px] uppercase tracking-[0.32em] text-white/50">
               Contact
             </p>
-            <h2 className="font-[family-name:var(--font-bebas-neue)] text-5xl leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
-              Let&apos;s build something{" "}
-              <span className="italic font-[family-name:var(--font-dm-serif-display)] tracking-normal">
-                enduring.
-              </span>
+            <h2 className="font-[family-name:var(--font-dm-serif-display)] text-5xl italic leading-[0.95] tracking-normal md:text-6xl lg:text-7xl">
+              Let&apos;s build something enduring.
             </h2>
             <p className="mt-8 max-w-md font-[family-name:var(--font-dm-serif-display)] text-lg leading-relaxed text-white/75 md:text-xl">
               Whether you&apos;re a house, a founder or a group considering the
