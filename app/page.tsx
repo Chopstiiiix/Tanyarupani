@@ -41,7 +41,7 @@ const ABOUT_IMAGE_SRC = "/images/about.jpg";
 const CONTACT = {
   calendly: "https://calendly.com/tanyarupani",
   phone: "+234 000 000 0000",
-  email: "send2chopstix@gmail.com",
+  email: "tanyarupani@gmail.com",
   instagram: "https://instagram.com/tanyarupani",
   linkedin: "https://linkedin.com/in/tanyarupani",
   twitter: "https://twitter.com/tanyarupani",
